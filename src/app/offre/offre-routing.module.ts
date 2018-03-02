@@ -5,10 +5,10 @@ import { OffreListComponent } from './offre-list/offre-list.component';
 import { OffreDetailComponent } from './offre-detail/offre-detail.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'offres', pathMatch: 'full' },
+  // { path: '', redirectTo: 'offres', pathMatch: 'full' },
   {
-    path: 'offres', component: OffreListComponent, children: [
-      { path: ':id', component: OffreDetailComponent }
+    path: '', component: OffreListComponent, children: [
+      { path: 'offre/:id', component: OffreDetailComponent }
     ]
   }
 ];

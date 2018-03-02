@@ -3,7 +3,7 @@
 </div>
 
 <div bp="grid 6 4@md 2@lg">
-	<a *ngFor="let offre of offres | async" [routerLink]="['./', offre.id]" class="card--media">
+	<a *ngFor="let offre of offres | async" [routerLink]="['./offre', offre.id]" class="card--media">
 		<i [class]="' sprite sprite-' + offre.id"></i>
 		<div class="card--media__content">
 			{{offre.name}}

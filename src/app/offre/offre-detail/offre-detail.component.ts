@@ -54,6 +54,6 @@ export class OffreDetailComponent implements OnInit, OnDestroy {
   }
 
   close() {
-    this.router.navigateByUrl('/offres');
+    this.router.navigateByUrl('/');
   }
 }
