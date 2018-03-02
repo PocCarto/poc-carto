@@ -1,0 +1,15 @@
+<div bp="grid 12">
+	<app-form-search (formChange)="search($event)"></app-form-search>
+</div>
+
+<div bp="grid 6 4@md 2@lg">
+	<a *ngFor="let offre of offres | async" [routerLink]="['./', offre.id]" class="card--media">
+		<i [class]="' sprite sprite-' + offre.id"></i>
+		<div class="card--media__content">
+			{{offre.name}}
+			<span bp="float-right">#{{offre.id}}</span>
+		</div>
+	</a>
+</div>
+
+<router-outlet></router-outlet>
